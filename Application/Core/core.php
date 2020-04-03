@@ -53,10 +53,19 @@
     addRoute('/?', 'homeController');
     addRoute('/about/?', 'aboutController');
     
-    
+    // C feladat.
     addRoute('/allBus/?', 'allBusController');
-    
-
+    // D. feladat
+    addRoute('/testes/(?<id>\d+)/?', 'testesController');
+    // E feladat.
+    addRoute('/modifyBusForm/(?<id>\d+)/?', 'modifyBusFormController');
+    addRoute('/modifyBus/?','modifyBusCotroller');
+    // F. feladat
+    addRoute('/newBusForm/?','newBusFormController');
+    addRoute('/newBus/?','newBusCotroller');
+    // G. feladat
+    addRoute('/newTestForm/?', 'newTestFormController');
+    addRoute('/newTest/?', 'newTestController');
     /**
      * A routing függvény végzi a kikeresést és a controller függvény meghívását.
      */

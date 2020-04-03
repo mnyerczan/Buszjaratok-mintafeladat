@@ -123,6 +123,37 @@ a {
     color           : white;
 }
 
+/*---- Teste ----*/
+.all-test-container {
+    width           : 800px;
+    margin          : auto;    
+    color           : blue;    
+}
+
+/*---- Modify bus -----*/
+.modify-bus-form {
+    width           : 400px;
+    margin          : 100px auto;
+    display         : table;
+    border          : 1px solid lightblue;
+}
+.modify-bus-form label {
+    display         : block;
+}
+.modify-bus-form input {
+    width           : 300px;
+}
+.succ-mod-container {
+    width           : 300px;
+    margin          : 100px auto;
+    color           : green;
+}
+.unsucc-mod-container {
+    width           : 300px;
+    margin          : 100px auto;
+    color           : red;
+}
+
 /*---- Table ----*/
 
 .allbus-table {

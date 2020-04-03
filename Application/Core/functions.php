@@ -41,7 +41,7 @@ function routing($cleanedUri)
  
     foreach($routes as $pattern => $controller)
     {        
-        if(preg_match($pattern, $cleanedUri, $matches))
+        if (preg_match($pattern, $cleanedUri, $matches))
         {            
             $controller($matches);
             return;
