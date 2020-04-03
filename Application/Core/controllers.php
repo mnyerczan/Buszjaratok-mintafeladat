@@ -11,7 +11,8 @@ function homeController()
 
 function newBusFormController()
 {
-    view([       
+    view([ 
+        "newBus"    => 'active',       
         "title"     => "- Új buszjárat felvétele",
         'view'      => 'newBusForm'
     ]);  
@@ -32,7 +33,8 @@ function newTestFormController()
      }
      
 
-     view([       
+     view([   
+        'newTest'   => 'active',
         "title"     => "- Új vizsgálat felvétele",
         'view'      => 'newTestForm',
         'ids'       =>  getBusIds($pdo)
@@ -145,7 +147,7 @@ function modifyBusCotroller()
     {
         header('Refresh:2;url='.APPROOT.'/modifyBusForm');
 
-        view([       
+        view([              
             "title"     => "- Sikertelen módosítás",
             'view'      => 'unsuccesfulModify'            
         ]);          
@@ -192,7 +194,7 @@ function modifyBusFormController($datas)
 
     extract($bus);
 
-    view([           
+    view([                
         "title"     => "- Buszjárat módosítása",
         'view'      => 'modifyBusForm',
         'id'        => $id,
