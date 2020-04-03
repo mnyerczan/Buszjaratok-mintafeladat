@@ -207,8 +207,10 @@ function getAllBuses( PDO $pdo )
     } 
     catch (RuntimeException $e) 
     {
-        error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
-
+        errorLog($e->getMessage());        
         return [];
     }
 }
+
+
+

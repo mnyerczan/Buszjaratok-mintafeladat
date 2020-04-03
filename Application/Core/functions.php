@@ -64,3 +64,16 @@ function view($datas)
     require_once APPPATH.'Templates/_layout.php';
     die;
 }
+
+
+/**
+ * @param string $message Kiírandó hibaüzenet
+ */
+function errorLog($message)
+{   
+    
+    $path       = APPPATH.'Log/dberror.log';
+    $msg        = "[".date('Y-m-d H:i:s')."]".$message.PHP_EOL;
+
+    return file_put_contents($path, $msg);
+}

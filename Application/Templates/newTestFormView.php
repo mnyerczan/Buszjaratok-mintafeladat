@@ -3,7 +3,7 @@
         <fieldset class="modify-bus-form">
             <legend>Új vizsgálat felvitele</legend>
 
-            <label for="">Búszjárat azonosító</label>
+            <label for="">Buszjárat azonosító</label>
             <select name="buszID" id="">
                 <?php foreach($ids as $id): ?>
                     <option value="<?= $id['id'] ?>"><?=$id['id']?></option>
