@@ -1,0 +1,142 @@
+/*---- Generaly element selectors ----*/
+body {
+    margin          : 0;
+    background-color: rgb(250, 250, 250);
+    font-size       : 14px;
+    font-family: sans-serif;
+}
+a {
+    text-decoration : none;
+    color           : black;
+}
+* {
+    outline         : none;
+}
+
+/*---- HEADER ----*/
+.header {    
+    width           : calc(100% - 20px );
+    padding         : 0 10px;    
+    height          : 60px;
+    background-color:#0e0f24;    
+    
+    user-select     : none; /* Standard syntax */
+    -ms-user-select : none; /* IE 10+ and Edge */
+    -webkit-user-select: none; /* Safari */
+}
+
+.header a.active {
+    border-bottom   : 4px solid rgb(255, 60, 0);
+    color           : white;    
+    height          : 1.2em;      
+}
+
+.header a {
+    position        : relative;
+    padding         : 20px 15px;
+    display         : inline-block;
+    color           : rgb(255, 255, 255);          
+}
+.header a.about {
+    float           : right;
+}
+.header a:hover:not(.active) {
+    color           : #ccc;
+} 
+
+/*---- Home page ----*/
+.wellcome-container {
+    font-size       : 30px;
+    text-align      : center;
+    margin          : 50px auto;  
+}
+
+/*---- About ----*/
+.about-container {
+    font-size       : 20px;
+    text-align      : center;
+    width           : 60%;
+    margin          : 50px auto;  
+    font-style      : italic;
+}
+.about-container p {
+    margin          : 100px 0;
+}
+.about-container p::first-letter {
+    font-size       : 50px;    
+}
+
+/*---- ERROR ----*/
+.error-cont {
+    margin          : auto;
+    padding         : 50px 200px 200px 200px;
+    background-color: rgb(221, 221, 221);
+    width           : 1000px;
+    display         : table;
+    font-size       : 40px;
+    border          : 1px solid #aaa;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*---- 404 ----*/
+.ms-404-msg{
+    padding:0 50px;  
+}
+.ms-404-img {
+    width: 1300px;
+    height: 800px;
+}
+@media ( max-width:1350px ), ( max-height: 900px ) {
+    .ms-404-img {
+        width: 1000px;
+        height: 600px;
+    }
+}
+
+@media ( max-width:1000px ), ( max-height: 750px ) {
+    .ms-404-img {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+@media ( max-width:700px ), ( max-height: 500px ) {
+    .ms-404-img {
+        width: 200px;
+        height: 130px;
+    }
+}
+
+/*---- Buttons ----*/
+.btn {
+    border          : none;
+    border-radius   : 4px;
+    padding         : 4px 10px;
+}
+.btn-grn {
+    background-image: linear-gradient(to bottom, rgb(1, 170, 1), rgb(1, 77, 1));
+    color           : white;
+}
+.btn-rng {
+    background-image: linear-gradient(to bottom, rgb(255, 185, 55), rgb(139, 77, 0));
+    color           : white;
+}
+
+/*---- Table ----*/
+
+.allbus-table {
+    margin          : 100px auto;    
+}
+.allbus-table th {
+    border-bottom   : 1px solid lightblue;
+}
+.allbus-table td {
+    border-bottom   : 1px solid #ddd;
+    text-align      : center;
+}
+.allbus-table th, 
+.allbus-table td {
+    width           : 200px;
+    line-height     : 70px;
+}
