@@ -45,7 +45,6 @@ function newTestController()
 {
     // Adatok, kapcsolat begyűjtése
     $test = $_POST;
-
     $config = getConfig(CONFPATH);
     $pdo    = getConnection($config);
 
@@ -56,15 +55,12 @@ function newTestController()
             'view'      => '_error'            
         ]);        
     }
-
      // Módosítás
      $result = newTest($pdo, $test);
-
      // Visszajelzés
      if (!$result)
      {
-         header('Refresh:2;url='.APPROOT.'/newTestForm');
- 
+         header('Refresh:2;url='.APPROOT.'/newTestForm'); 
          view([       
              "title"     => "- Sikertelen módosítás",
              'view'      => 'unsuccesfulModify'            
@@ -72,13 +68,11 @@ function newTestController()
      }
      else
      {
-         header('Refresh: 2; url='.APPROOT.'/allBus');
- 
+         header('Refresh: 2; url='.APPROOT.'/allBus'); 
          view([       
              "title"     => "- Sikeres módosítás",
              'view'      => 'succesfulModify'            
-         ]);  
-         
+         ]);           
      }      
 }
 
@@ -86,7 +80,6 @@ function newBusCotroller()
 {
      // Adatok, kapcsolat begyűjtése
      $bus = $_POST;
-
      $config = getConfig(CONFPATH);
      $pdo    = getConnection($config);
  
@@ -96,11 +89,9 @@ function newBusCotroller()
              "title"     => "- Hiba",
              'view'      => '_error'            
          ]);        
-     }
- 
+     } 
     // Módosítás
     $result = newBus($pdo, $bus);
-
     // Visszajelzés
     if (!$result)
     {
@@ -118,8 +109,7 @@ function newBusCotroller()
         view([       
             "title"     => "- Sikeres módosítás",
             'view'      => 'succesfulModify'            
-        ]);  
-        
+        ]);          
     }      
 }
 
@@ -138,10 +128,8 @@ function modifyBusCotroller()
             'view'      => '_error'            
         ]);        
     }
-
     // Módosítás
     $result = modifyBus($pdo, $bus);
-
     // Visszajelzés
     if (!$result)
     {
@@ -159,8 +147,7 @@ function modifyBusCotroller()
         view([       
             "title"     => "- Sikeres módosítás",
             'view'      => 'succesfulModify'            
-        ]);  
-        
+        ]);          
     }        
 }
 

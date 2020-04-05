@@ -1,6 +1,6 @@
 <form action="<?= APPROOT ?>/newBus" method="POST">
     <fieldset class="modify-bus-form">
-        <legend>Buszjárat módosítása</legend>
+        <legend>Új buszjárat felvitele</legend>
 
         <label for="">Indulás</label>
         <input type="text" name="indulas"  required autofocus>
@@ -17,3 +17,5 @@
         <input type="submit" value="Submit" class="btn btn-grn">  
     </fieldset>
 </form>
+
+

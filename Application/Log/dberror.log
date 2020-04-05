@@ -1,7 +1,4 @@
-[2020-03-31 09:10:27]SQLSTATE[HY000] [1049] Unknown database 'buses'
-[2020-03-31 09:17:35]SQLSTATE[HY000] [1049] Unknown database 'buses'
-[2020-03-31 09:18:28]SQLSTATE[HY000] [1049] Unknown database 'buses'
-[2020-03-31 09:18:39]SQLSTATE[HY000] [1049] Unknown database 'buses'
-[2020-04-03 08:05:08]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
-[2020-04-03 08:05:23]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
-[2020-04-03 08:05:29]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2020-04-05 16:28:09]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2020-04-05 16:29:20]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2020-04-05 16:29:21]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2020-04-05 16:29:22]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)

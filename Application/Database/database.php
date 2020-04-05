@@ -14,8 +14,7 @@ function getConnection($config)
     } 
     catch (PDOException $e) 
     {
-        error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
-
+        errorLog($e->getMessage());
         return false;
     }
 }
@@ -25,20 +24,17 @@ function getBusIds($pdo)
 {
     $smt = $pdo->prepare('SELECT `id` FROM `busz`');
       
-
     try 
     {
         if( !$smt->execute() )
         {
             throw new RuntimeException( $smt->errorInfo()[2] );
-        }
-        
+        }        
         return $smt->fetchAll( PDO::FETCH_ASSOC );
     } 
     catch (RuntimeException $e) 
     {
-        error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
-
+        errorLog($e->getMessage());
         return [];
     }
 }
@@ -54,21 +50,18 @@ function newTest($pdo, $test)
     $smt->bindParam(':datum',     $datum);
     $smt->bindParam(':megjegyzes',$megjegyzes);
     $smt->bindParam(':engedelyezve',$engedelyezve);
-    
-  
+      
     try 
     {
         if( !$smt->execute() )
         {
             throw new RuntimeException( $smt->errorInfo()[2] );
-        }
-        
+        }        
         return true;
     } 
     catch (RuntimeException $e) 
     {
-        error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
-
+        errorLog($e->getMessage());        
         return false;
     }
 }
@@ -126,14 +119,12 @@ function modifyBus(PDO $pdo, $bus)
         if( !$smt->execute() )
         {
             throw new RuntimeException( $smt->errorInfo()[2] );
-        }
-        
+        }        
         return true;
     } 
     catch (RuntimeException $e) 
-    {
-        error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
-
+    {        
+        errorLog($e->getMessage());
         return false;
     }
 }
@@ -142,24 +133,19 @@ function modifyBus(PDO $pdo, $bus)
 function getBusById(PDO $pdo, $buszId)
 {
     $smt = $pdo->prepare('SELECT * FROM `busz` WHERE `id` = :buszId');
-
     $smt->bindParam(':buszId', $buszId);
   
-
-
     try 
     {
         if( !$smt->execute() )
         {
             throw new RuntimeException( $smt->errorInfo()[2] );
-        }
-        
+        }        
         return $smt->fetch( PDO::FETCH_ASSOC );
     } 
     catch (RuntimeException $e) 
     {
-        error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
-
+        errorLog($e->getMessage());
         return [];
     }
 }
@@ -184,7 +170,7 @@ function getTestes( PDO $pdo, $buszId )
     } 
     catch (RuntimeException $e) 
     {
-        error_log("[".date('Y-m-d H:i:s')."]".$e->getMessage().PHP_EOL, 3, APPPATH.'Log/dberror.log');
+        errorLog($e->getMessage());
 
         return [];
     }

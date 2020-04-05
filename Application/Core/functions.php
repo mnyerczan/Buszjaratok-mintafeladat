@@ -69,11 +69,10 @@ function view($datas)
 /**
  * @param string $message Kiírandó hibaüzenet
  */
-function errorLog($message)
-{   
-    
+function errorLog(string $message)
+{       
     $path       = APPPATH.'Log/dberror.log';
     $msg        = "[".date('Y-m-d H:i:s')."]".$message.PHP_EOL;
 
-    return file_put_contents($path, $msg);
+    return file_put_contents($path, $msg, FILE_APPEND );
 }
